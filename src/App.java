@@ -3,12 +3,12 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Mutant mutante = new Mutant(new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" });
-
-        System.out.println("Resultado: " + (mutante.isMutant() ? "Alto mutante" : "Re careta"));
+        System.out.println("Analisis de ADN terminado, resultado: "
+                + (isMutant(new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" }) ? "Mutante"
+                        : "Humano"));
     }
 
-    public boolean isMutant(String[] dna) {
+    public static boolean isMutant(String[] dna) {
         final String[] mutantDnaSequences = { "AAAA", "CCCC", "GGGG", "TTTT" };
         ArrayList<String> dnaSequences = new ArrayList<String>();
 
